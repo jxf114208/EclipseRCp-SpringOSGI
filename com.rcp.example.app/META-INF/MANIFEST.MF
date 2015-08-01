@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: com.rcp.example.app;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.rcp.example.app.Activator
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.intro,
+ org.eclipse.ui.forms,
+ org.eclipse.swt,
+ com.rcp.example.app.help;bundle-version="1.0.0";resolution:=optional,
+ com.rcp.example.module.d,
+ com.rcp.example.module.c
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy

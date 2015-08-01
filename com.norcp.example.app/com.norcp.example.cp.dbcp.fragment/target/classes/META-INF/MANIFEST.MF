@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fragment
+Bundle-SymbolicName: com.norcp.example.cp.dbcp.fragment
+Bundle-Version: 1.0.0.qualifier
+Fragment-Host: com.springsource.org.apache.commons.dbcp
+DynamicImport-Package: *

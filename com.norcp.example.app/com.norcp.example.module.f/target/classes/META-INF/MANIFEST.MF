@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: F
+Bundle-SymbolicName: com.norcp.example.module.f
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.norcp.example.module.f.domain,
+ com.norcp.example.module.f.service.api

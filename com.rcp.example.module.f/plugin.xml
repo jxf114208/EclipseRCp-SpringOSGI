@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.rcp.example.module.f.viewpart.UserViewPart"
+            id="com.rcp.example.module.f.viewpart.UserViewPart"
+            name="User ViewPart">
+      </view>
+   </extension>
+</plugin>

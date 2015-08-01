@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: module a
+Bundle-SymbolicName: com.rcp.example.module.a
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.rcp.example.moudle.a.Activator
+Bundle-Vendor: jxf
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: com.rcp.example.moudle.a.accessible,
+ com.rcp.example.moudle.a.internal;x-internal:=true,
+ com.rcp.example.moudle.a.internalfriends;x-friends:="com.rcp.example.module.b"

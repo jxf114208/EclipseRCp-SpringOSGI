@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.rcp.example.module.c.perspective.ElelmentPerspective"
+            fixed="true"
+            id="com.rcp.example.module.c.perspective.ElelmentPerspective"
+            name="ElelmentPerspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.rcp.example.module.c.viewpart.MasterViewPart"
+            id="com.rcp.example.module.c.viewpart.MasterViewPart"
+            name="Master ViewPart">
+      </view>
+      <view
+            class="com.rcp.example.module.c.viewpart.SlaveViewPart"
+            id="com.rcp.example.module.c.viewpart.SlaveViewPart"
+            name="Slave ViewPart">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.rcp.example.module.c.editorpart.ElementEditorPart"
+            contributorClass="com.rcp.example.module.c.action.EditorPartActionExample"
+            id="com.rcp.example.module.c.editorpart.ElementEditorPart"
+            name="Element EditorPart">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            description="this is a ActionSet"
+            id="com.rcp.example.module.c.actionset"
+            label="ActionSet"
+            visible="true">
+         <menu
+               id="com.rcp.example.module.c.actionsets.menu"
+               label="ActionSets Menu"
+               path="additions">
+            <separator
+                  name="content">
+            </separator>
+            <separator
+                  name="additions">
+            </separator>
+         </menu>
+         <action
+               class="com.rcp.example.module.c.action.delegate.WindowActionDelegateExample"
+               definitionId="com.rcp.example.module.c.command.exampleActionCommand"
+               id="com.rcp.example.module.c.action.delegate.WindowActionDelegateExample"
+               label="ActionSets Action"
+               menubarPath="com.rcp.example.module.c.actionsets.menu/content"
+               style="push"
+               toolbarPath="additions">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="com.rcp.example.module.c.viewpart.contribution"
+            targetID="com.rcp.example.module.c.viewpart.MasterViewPart">
+         <menu
+               id="com.rcp.example.module.c.viewpart.contribution.menu"
+               label="ViewContribution Menu"
+               path="additions">
+            <separator
+                  name="content">
+            </separator>
+            <separator
+                  name="additions">
+            </separator>
+         </menu>
+         <action
+               class="com.rcp.example.module.c.action.delegate.ViewActionDelegateExample"
+               id="com.rcp.example.module.c.action.delegate.ViewActionDelegateExample"
+               label="ViewContribution Action"
+               menubarPath="com.rcp.example.module.c.viewpart.contribution.menu/content"
+               style="push"
+               toolbarPath="additions">
+         </action>
+      </viewContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editorActions">
+      <editorContribution
+            id="com.rcp.example.module.c.editorpart.contribution"
+            targetID="com.rcp.example.module.c.editorpart.ElementEditorPart">
+         <menu
+               id="com.rcp.example.module.c.editorpart.contribution.menu"
+               label="EditorContribution Menu"
+               path="additions">
+            <separator
+                  name="content">
+            </separator>
+            <separator
+                  name="additions">
+            </separator>
+         </menu>
+         <action
+               class="com.rcp.example.module.c.action.delegate.EditorActionDelegateExample"
+               definitionId="com.rcp.example.module.c.command.exampleEditorActionCommand"
+               id="com.rcp.example.module.c.action.delegate.EditorActionDelegateExample"
+               label="EditorContribution Action"
+               menubarPath="com.rcp.example.module.c.editorpart.contribution.menu/content"
+               style="push"
+               toolbarPath="additions">
+         </action>
+      </editorContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            description="this is a Example Command Category"
+            id="com.rcp.example.module.c.commands.category"
+            name="Example Category">
+      </category>
+      <command
+            categoryId="com.rcp.example.module.c.commands.category"
+            description="this is a Action Command"
+            id="com.rcp.example.module.c.command.exampleActionCommand"
+            name="Action Command">
+      </command>
+      <command
+            categoryId="com.rcp.example.module.c.commands.category"
+            description="this is a Editor Action Command"
+            id="com.rcp.example.module.c.command.exampleEditorActionCommand"
+            name="Editor Action Command">
+      </command>
+      <keyBinding></keyBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.rcp.example.module.c.command.exampleActionCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+ALT+A">
+      </key>
+      <key
+            commandId="com.rcp.example.module.c.command.exampleEditorActionCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+ALT+E">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.rcp.example.module.c.preferences.SamplePreferencePage"
+            id="com.rcp.example.module.c.preferences.SamplePreferencePage"
+            name="Sample Preferences">
+      </page>
+      <page
+            class="com.rcp.example.module.c.preferences.StandardPreferencePageExample"
+            id="com.rcp.example.module.c.preferences.StandardPreferencePageExample"
+            name="Standard PreferencePage Example">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.rcp.example.module.c.preferences.PreferenceInitializer">
+      </initializer>
+      <initializer
+            class="com.rcp.example.module.c.preferences.StandardPreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

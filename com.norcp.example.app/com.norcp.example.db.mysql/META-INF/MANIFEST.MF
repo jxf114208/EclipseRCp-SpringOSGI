@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mysql
+Bundle-SymbolicName: com.norcp.example.db.mysql
+Bundle-Version: 1.0.0.qualifier
+Import-Package: com.mysql.jdbc;version="5.1.6",
+ org.springframework.beans.factory.config;version="2.5.6.SEC01"

@@ -1,0 +1,3 @@
+com.rcp.example.app/debug=true
+com.rcp.example.app/debug/gc=true
+com.rcp.example.app/debug/internalerror/openDialog=true
