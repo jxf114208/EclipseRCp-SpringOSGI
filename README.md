@@ -1,0 +1,1 @@
+# EclipseRCp-SpringOSGI
